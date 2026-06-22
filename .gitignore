@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Environments / secrets
+.venv/
+.env
+
+# Data, models, vector store (regenerated locally)
+data/
+models/
+*.safetensors
+.chroma/
+
+# OS / editor
+.DS_Store
+.claude/
