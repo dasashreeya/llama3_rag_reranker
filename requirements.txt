@@ -1,0 +1,36 @@
+# Runtime dependencies — pinned from a verified install on Python 3.11 / macOS arm64.
+# Apple-silicon / MLX stack. See README for the free-vs-API-key breakdown.
+
+# Fine-tuning (Apple silicon only; not used in CI)
+mlx-lm==0.31.3
+mlx==0.31.2
+
+# Embeddings + cross-encoder baseline
+sentence-transformers==5.6.0
+torch==2.12.1
+
+# Retrieval
+chromadb==1.5.9
+rank-bm25==0.2.2
+
+# Evaluation (RAGAS) — imported lazily, only when a judge LLM is configured.
+# ragas 0.2.x is pinned for the paper's metric names and a stable API; it requires
+# the langchain 0.3 line, so those are pinned together to stay coherent.
+ragas==0.2.15
+datasets==5.0.0
+langchain==0.3.30
+langchain-core==0.3.86
+langchain-community==0.3.31
+langchain-openai==0.2.14
+instructor==1.9.2
+
+# Serving
+fastapi==0.138.0
+uvicorn==0.49.0
+
+# Config / utilities
+pyyaml==6.0.3
+numpy==2.4.6
+
+# Optional cloud backend (only used if OPENAI_API_KEY is set)
+openai==1.109.1

@@ -15,6 +15,7 @@ data/
 models/
 *.safetensors
 .chroma/
+.chroma*/
 
 # OS / editor
 .DS_Store

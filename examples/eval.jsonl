@@ -1,0 +1,4 @@
+{"question": "Which planet is the largest in the Solar System?", "ground_truth": "Jupiter is the largest planet in the Solar System."}
+{"question": "Which planet is closest to the Sun?", "ground_truth": "Mercury is the closest planet to the Sun."}
+{"question": "Which planet is the hottest?", "ground_truth": "Venus is the hottest planet in the Solar System."}
+{"question": "Which planet is known for its rings?", "ground_truth": "Saturn is best known for its ring system."}

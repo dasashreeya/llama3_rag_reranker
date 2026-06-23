@@ -1,0 +1,7 @@
+# Slim dependency set for CI (lint + unit tests).
+# Pure-Python only: no torch / mlx / chromadb / model downloads.
+ruff
+pytest
+pyyaml
+rank-bm25
+numpy

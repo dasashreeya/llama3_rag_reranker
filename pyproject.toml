@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama3_rag_reranker"
+version = "0.1.0"
+description = "Generative LLaMA-3 reranker for RAG (MLX adaptation of the IJACSA cross-encoder paper)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "dasashreeya" }]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+l3rr-build-data = "llama3_rag_reranker.scripts_entry:build_data_main"
+l3rr-finetune = "llama3_rag_reranker.scripts_entry:finetune_main"
+l3rr-build-rag = "llama3_rag_reranker.scripts_entry:build_rag_main"
+l3rr-evaluate = "llama3_rag_reranker.scripts_entry:evaluate_main"
+l3rr-serve = "llama3_rag_reranker.scripts_entry:serve_main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
